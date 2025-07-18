@@ -1,0 +1,84 @@
+fileVersion: 1
+id: 26889804-c0c9-4e49-9701-e3cc59eb0745
+name: FUND_T1_AND_FULL_HISTORY
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 387549ec-8082-4c5f-8753-161096a0778e
+          stepCounter: 26889804-c0c9-4e49-9701-e3cc59eb0745
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FUND_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b81df9df-3403-4aaa-bade-1ec194122b25
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5582b0a6-b8c3-40ab-93f0-229db9d60b04
+          stepCounter: 26889804-c0c9-4e49-9701-e3cc59eb0745
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: T1_CODE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4f5d5f09-cb4c-4d07-9bb9-992736fcb918
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: MIN("FUND_CODES"."T1_CODE")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bd632f8-3896-43d5-ace4-08ce1cc9f0b6
+          stepCounter: 26889804-c0c9-4e49-9701-e3cc59eb0745
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FULL_HISTORY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37b898e6-4682-4b2c-a5bb-d826099adfc1
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: |-
+              CASE WHEN MIN("FUND_CODES"."T1_ID") = 1 THEN MIN("FUND_CODES"."PORT_COMPLETE_CODE_T3")
+              ELSE NULL
+              END
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FUND_CODES: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: FUND_CODES
+        join:
+          joinCondition: |-
+            FROM {{ ref('SILVER', 'FUND_CODES') }} "FUND_CODES"
+            GROUP BY "FUND_CODES"."FUND_ID"
+        name: FUND_T1_AND_FULL_HISTORY
+        noLinkRefs: []
+  name: FUND_T1_AND_FULL_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

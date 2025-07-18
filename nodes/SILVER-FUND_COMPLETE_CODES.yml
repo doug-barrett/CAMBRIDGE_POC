@@ -1,0 +1,196 @@
+fileVersion: 1
+id: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+name: FUND_COMPLETE_CODES
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 057ed27a-4d0d-46ab-856f-c237d4e8be13
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FUND_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 387549ec-8082-4c5f-8753-161096a0778e
+                stepCounter: 26889804-c0c9-4e49-9701-e3cc59eb0745
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f0fb2fb-4c7a-4330-92ef-251e6507d4e6
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: T1_CODE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5582b0a6-b8c3-40ab-93f0-229db9d60b04
+                stepCounter: 26889804-c0c9-4e49-9701-e3cc59eb0745
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f43e2c3-a133-4bf2-8319-028598079975
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FULL_HISTORY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9bd632f8-3896-43d5-ace4-08ce1cc9f0b6
+                stepCounter: 26889804-c0c9-4e49-9701-e3cc59eb0745
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1bca704d-4e2a-4179-8769-aeae4823e60c
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PARTIAL_HISTORY_FAIR_MARKET_VALUE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37b898e6-4682-4b2c-a5bb-d826099adfc1
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: CASE WHEN "FUND_CODES_FMV"."T1_ID" = 2 THEN "FUND_CODES_FMV"."PORT_COMPLETE_CODE_T3" ELSE NULL END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18597259-b4ff-4cf1-b7e2-9246695ac469
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PARTIAL_HISTORY_CURRENT_COST
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37b898e6-4682-4b2c-a5bb-d826099adfc1
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: CASE WHEN "FUND_CODES_COST"."T1_ID" = 2 THEN "FUND_CODES_COST"."PORT_COMPLETE_CODE_T3" ELSE NULL END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 156e648a-7ddd-4d1c-847d-e1cd6afe49ec
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PARTIAL_HISTORY_INCEPTION_TO_DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37b898e6-4682-4b2c-a5bb-d826099adfc1
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: CASE WHEN "FUND_CODES_ITD"."T1_ID" = 2 THEN "FUND_CODES_ITD"."PORT_COMPLETE_CODE_T3" ELSE NULL END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec5fb2ed-13e7-43bd-85b1-df1f7a4d5950
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: FAIR_MARKET_VALUE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 342b6ae0-22b7-4022-96b0-4335bd4f83c2
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: "\"FUND_CODES_FMV\".\"PORT_COMPLETE_CODE_T3\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 553a5db6-ffde-447f-99a8-d681333ac820
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: CURRENT_COST
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 342b6ae0-22b7-4022-96b0-4335bd4f83c2
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: "\"FUND_CODES_COST\".\"PORT_COMPLETE_CODE_T3\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 351e21b5-1b1e-4901-9a65-9edb220fe089
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: INCEPTION_TO_DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 342b6ae0-22b7-4022-96b0-4335bd4f83c2
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: "\"FUND_CODES_ITD\".\"PORT_COMPLETE_CODE_T3\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e178e47e-89cc-48c7-9f6a-c81342fde8d0
+          stepCounter: 05c6dfe1-b078-4512-90e3-cebbed41de7d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: CASH_IN_CASH_OUT
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 342b6ae0-22b7-4022-96b0-4335bd4f83c2
+                stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+            transform: "\"FUND_CODES_CICO\".\"PORT_COMPLETE_CODE_T3\""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FUND_CODES_CICO: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+          FUND_CODES_COST: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+          FUND_CODES_FMV: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+          FUND_CODES_ITD: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+          FUND_T1_AND_FULL_HISTORY: 26889804-c0c9-4e49-9701-e3cc59eb0745
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: FUND_CODES
+          - locationName: SILVER
+            nodeName: FUND_T1_AND_FULL_HISTORY
+        join:
+          joinCondition: |-
+            FROM {{ ref('SILVER', 'FUND_T1_AND_FULL_HISTORY') }} "FUND_T1_AND_FULL_HISTORY"
+            LEFT JOIN {{ ref('SILVER', 'FUND_CODES') }} "FUND_CODES_FMV" 
+            ON "FUND_T1_AND_FULL_HISTORY"."FUND_ID" = "FUND_CODES_FMV"."FUND_ID"
+            AND "FUND_CODES_FMV"."PORT_COMPLETE_CODE_T2_ID" = 1
+            LEFT JOIN {{ ref('SILVER', 'FUND_CODES') }} "FUND_CODES_COST" 
+            ON "FUND_T1_AND_FULL_HISTORY"."FUND_ID" = "FUND_CODES_COST"."FUND_ID"
+            AND "FUND_CODES_COST"."PORT_COMPLETE_CODE_T2_ID" = 2
+            LEFT JOIN {{ ref('SILVER', 'FUND_CODES') }} "FUND_CODES_ITD" 
+            ON "FUND_T1_AND_FULL_HISTORY"."FUND_ID" = "FUND_CODES_ITD"."FUND_ID"
+            AND "FUND_CODES_ITD"."PORT_COMPLETE_CODE_T2_ID" = 3
+            LEFT JOIN {{ ref('SILVER', 'FUND_CODES') }} "FUND_CODES_CICO" 
+            ON "FUND_T1_AND_FULL_HISTORY"."FUND_ID" = "FUND_CODES_CICO"."FUND_ID"
+            AND "FUND_CODES_CICO"."PORT_COMPLETE_CODE_T2_ID" = 4
+        name: FUND_COMPLETE_CODES
+        noLinkRefs: []
+  name: FUND_COMPLETE_CODES
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

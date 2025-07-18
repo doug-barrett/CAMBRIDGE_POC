@@ -1,0 +1,124 @@
+fileVersion: 1
+id: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+name: FUND_CODES
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b81df9df-3403-4aaa-bade-1ec194122b25
+          stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FUND_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b572fb89-c5a9-4b28-b6fc-b3e2fefa1da9
+                stepCounter: c1ea8c24-2fb7-4d34-b575-6b59c2c845e5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37b898e6-4682-4b2c-a5bb-d826099adfc1
+          stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: T1_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f136c1a6-fffe-4d03-a963-9d3eeb6421e3
+                stepCounter: 777b5b11-583c-4c1b-9de4-72386700ce61
+            transform: MIN("PORT_COMPLETE_CODE_MAPPING"."PORT_COMPLETE_CODE_T1_ID")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f5d5f09-cb4c-4d07-9bb9-992736fcb918
+          stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: T1_CODE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16545b08-af1e-4edf-bc67-2df7e551430d
+                stepCounter: 5472de79-4a3a-42d3-952f-3be7b574530b
+            transform: MIN("PORT_COMPLETE_CODE_TIER1"."PORT_COMPLETE_CODE_T1")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2080e8bc-0cf1-48ad-9c18-69b6115ec826
+          stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PORT_COMPLETE_CODE_T2_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 153253d4-f7b4-451b-a412-97a4a30d3df6
+                stepCounter: 777b5b11-583c-4c1b-9de4-72386700ce61
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 342b6ae0-22b7-4022-96b0-4335bd4f83c2
+          stepCounter: 2ef7e9ae-681d-4b3e-9a57-186d9478fead
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: PORT_COMPLETE_CODE_T3
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85e704c1-666b-4a8b-b21d-eb21b82945ad
+                stepCounter: c244e5e5-553f-43fb-8c88-40fab4b8900c
+            transform: MIN("PORT_COMPLETE_CODE_TIER3"."PORT_COMPLETE_CODE_T3")
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          AACS_FUND_PORTFOLIO_CODE: c1ea8c24-2fb7-4d34-b575-6b59c2c845e5
+          PORT_COMPLETE_CODE_MAPPING: 777b5b11-583c-4c1b-9de4-72386700ce61
+          PORT_COMPLETE_CODE_TIER1: 5472de79-4a3a-42d3-952f-3be7b574530b
+          PORT_COMPLETE_CODE_TIER3: c244e5e5-553f-43fb-8c88-40fab4b8900c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_AADB
+            nodeName: AACS_FUND_PORTFOLIO_CODE
+          - locationName: SRC_AADB
+            nodeName: PORT_COMPLETE_CODE_MAPPING
+          - locationName: SRC_AADB
+            nodeName: PORT_COMPLETE_CODE_TIER1
+          - locationName: SRC_AADB
+            nodeName: PORT_COMPLETE_CODE_TIER3
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC_AADB', 'AACS_FUND_PORTFOLIO_CODE') }} "AACS_FUND_PORTFOLIO_CODE"
+            JOIN {{ ref('SRC_AADB', 'PORT_COMPLETE_CODE_MAPPING') }} "PORT_COMPLETE_CODE_MAPPING"
+            ON "AACS_FUND_PORTFOLIO_CODE"."PORT_COMPLETE_CODE_MAPPING_ID" = "PORT_COMPLETE_CODE_MAPPING"."PORT_COMPLETE_CODE_MAPPING_ID"
+            JOIN {{ ref('SRC_AADB', 'PORT_COMPLETE_CODE_TIER1') }} "PORT_COMPLETE_CODE_TIER1"
+            ON "PORT_COMPLETE_CODE_TIER1"."PORT_COMPLETE_CODE_T1_ID" = "PORT_COMPLETE_CODE_MAPPING"."PORT_COMPLETE_CODE_T1_ID"
+            LEFT JOIN {{ ref('SRC_AADB', 'PORT_COMPLETE_CODE_TIER3') }} "PORT_COMPLETE_CODE_TIER3"
+            ON "PORT_COMPLETE_CODE_TIER3"."PORT_COMPLETE_CODE_T3_ID" = "PORT_COMPLETE_CODE_MAPPING"."PORT_COMPLETE_CODE_T3_ID"
+            GROUP BY "AACS_FUND_PORTFOLIO_CODE"."FUND_ID", "PORT_COMPLETE_CODE_MAPPING"."PORT_COMPLETE_CODE_T2_ID"
+        name: FUND_CODES
+        noLinkRefs: []
+  name: FUND_CODES
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 7319e70e-3bdb-4275-9e01-aaae7b71e09d
+name: FUND_IMIS_HEDGEFUND_OF_FUND_PRODUCTS
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa9e7e0f-255a-4327-8606-d8ac4be53c28
+          stepCounter: 7319e70e-3bdb-4275-9e01-aaae7b71e09d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRODUCT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 15065b7a-b781-48d2-8575-d69e0a6718ec
+                stepCounter: 82746457-0d5c-44f4-ac5f-7880774275ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: be1e5425-4079-4104-a2d0-e18f0877a24d
+          stepCounter: 7319e70e-3bdb-4275-9e01-aaae7b71e09d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STRATEGYCODE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5e29755a-e5fc-40d8-aa06-65be7414af1e
+                stepCounter: 82746457-0d5c-44f4-ac5f-7880774275ec
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PRODUCT_STRATEGY: 82746457-0d5c-44f4-ac5f-7880774275ec
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_IMISDE
+            nodeName: PRODUCT_STRATEGY
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC_IMISDE', 'PRODUCT_STRATEGY') }} "PRODUCT_STRATEGY"
+            WHERE "PRODUCT_STRATEGY"."STRATEGYCODE" IN (91, 227, 257, 258, 328)
+        name: FUND_IMIS_HEDGEFUND_OF_FUND_PRODUCTS
+        noLinkRefs: []
+  name: FUND_IMIS_HEDGEFUND_OF_FUND_PRODUCTS
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

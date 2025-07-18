@@ -1,0 +1,100 @@
+fileVersion: 1
+id: 5a003cf0-7349-4aa4-92ac-7e7e87e13aca
+name: FUND_APPROVALS
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ca1a203-5de4-46a5-9b3d-7fc3729c05bb
+          stepCounter: 5a003cf0-7349-4aa4-92ac-7e7e87e13aca
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FUND_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4fee519-87bf-4ba6-8b73-fef1575c12ec
+                stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1706a880-4cdd-4846-8d66-eacf89e19853
+          stepCounter: 5a003cf0-7349-4aa4-92ac-7e7e87e13aca
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: FUNDAPPROVALS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 21e71ed1-86d6-4668-a059-207e4312f5dd
+                stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e29adc88-dd66-4f71-a6d3-5598c465d611
+          stepCounter: 5a003cf0-7349-4aa4-92ac-7e7e87e13aca
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: AIIM_FUND_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5827d09d-cd67-48d3-b17e-7e3d2cdb9322
+                stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b459fcc5-4176-4229-8c14-2719bff175ff
+          stepCounter: 5a003cf0-7349-4aa4-92ac-7e7e87e13aca
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COMMENTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d023902-f218-4016-818f-da9e4b413efe
+                stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FUNDAPPROVALS: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+          FUND_APPROVALS_DUPLICATES: 2d8cadef-59fb-4f59-83b6-207adca3d150
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: FUND_APPROVALS_DUPLICATES
+          - locationName: SRC_AADB
+            nodeName: FUNDAPPROVALS
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC_AADB', 'FUNDAPPROVALS') }} "FUNDAPPROVALS"
+            LEFT JOIN {{ ref('SILVER', 'FUND_APPROVALS_DUPLICATES') }} "FUND_APPROVALS_DUPLICATES"
+            ON "FUNDAPPROVALS"."FUND_ID" = "FUND_APPROVALS_DUPLICATES"."FUND_ID"
+            WHERE "FUND_APPROVALS_DUPLICATES"."FUND_ID" IS NULL
+        name: FUND_APPROVALS
+        noLinkRefs: []
+  name: FUND_APPROVALS
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

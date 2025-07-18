@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 2d8cadef-59fb-4f59-83b6-207adca3d150
+name: FUND_APPROVALS_DUPLICATES
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e20bea3d-8b0c-4ff2-9e39-ddfcc6ba7985
+          stepCounter: 2d8cadef-59fb-4f59-83b6-207adca3d150
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FUND_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4fee519-87bf-4ba6-8b73-fef1575c12ec
+                stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FUNDAPPROVALS: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_AADB
+            nodeName: FUNDAPPROVALS
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC_AADB', 'FUNDAPPROVALS') }} "FUNDAPPROVALS"
+            GROUP BY 1
+            HAVING COUNT(1) > 1
+        name: FUND_APPROVALS_DUPLICATES
+        noLinkRefs: []
+  name: FUND_APPROVALS_DUPLICATES
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node
