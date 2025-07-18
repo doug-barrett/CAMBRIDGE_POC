@@ -171,7 +171,7 @@ operation:
           - columnReferences:
               - columnCounter: 13d1304f-2bc0-424d-9c5e-e43193fcbe39
                 stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
-            transform: "\"V_BROOKLYN_AADB_LEGACY_MAP\".\"LEGACYTABLENAME\""
+            transform: "'My transform'"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
