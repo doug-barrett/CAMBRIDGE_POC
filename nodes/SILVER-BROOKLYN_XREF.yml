@@ -11,7 +11,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: This is the main branch comment
   isMultisource: false
   locationName: SILVER
   materializationType: table
@@ -171,7 +171,7 @@ operation:
           - columnReferences:
               - columnCounter: 13d1304f-2bc0-424d-9c5e-e43193fcbe39
                 stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
-            transform: ""
+            transform: "\"V_BROOKLYN_AADB_LEGACY_MAP\".\"LEGACYTABLENAME\""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
