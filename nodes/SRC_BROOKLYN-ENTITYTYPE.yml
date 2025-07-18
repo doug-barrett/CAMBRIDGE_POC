@@ -1,0 +1,168 @@
+fileVersion: 1
+id: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+name: ENTITYTYPE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_BROOKLYN
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f70127dd-371c-4c3b-88a5-5e3b0b428e24
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ENTITYTYPEID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1abfec2-28c0-4336-bf50-cde940bfbb86
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: ENTITYTYPENAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d1dca6f-11b7-4424-bf56-f1e5527410a9
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e81179d5-fd4a-4615-b4e2-268ab4eb4ef5
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1ad3533-3fde-4344-b4fe-85dc6266380b
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 342c66c0-4637-4a7c-a12b-386c176c8556
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18433235-04dc-40ca-aad6-657b84532e9c
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6426ae6b-3f73-4e03-8dba-8b84d10d672f
+          stepCounter: dc9a461a-f3dc-4e1c-bb34-e5d07c0fb92d
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ENTITYTYPE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

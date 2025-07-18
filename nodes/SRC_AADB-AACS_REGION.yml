@@ -1,0 +1,339 @@
+fileVersion: 1
+id: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+name: AACS_REGION
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_AADB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b90e798f-a388-4db1-9948-64f642ff33d0
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: REGION_GROUP_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 146e9942-34ff-4541-95bb-70fdaf29d5f4
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: REGION_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de09f889-3dac-4bc9-a52e-4b9fd3a005a7
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: REGION_SNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b1a9d67-c4b7-43c5-b5b2-e2b31b01f014
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: REGION_LNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea6069fb-12b1-4edb-bd2a-89586384899c
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: ADDED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1de63394-1514-4aef-86e3-b10989f89b2b
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: MODIFIED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9fb74f6-afb0-41c1-b3db-30a53f166304
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: ""
+        name: GROUP_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0596d87-64ab-442c-8954-05855d594979
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DIVISION_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9dc1d29c-a175-431d-8a0d-78cb87e2c895
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: US_IND
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 615c1e87-8d74-462d-825a-92fab43fbf84
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: PROPERTY_DISPLAY_IND
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6631c814-ca66-473c-89fc-6e70dec791cf
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(36)
+        defaultValue: ""
+        description: ""
+        name: REGIONGUID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1927ea6d-730e-4a5b-bce1-eef07925b1b1
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8493eb4f-6e14-49c2-b59a-bdcfc7eca8f5
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 518ecd12-af45-40bf-b12d-880eb1add8db
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6918dab4-6045-4c96-bcd3-0cbc301ae304
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3d099be-e7b8-47a6-b04c-f61647cc28f1
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 897d396a-f7a4-40c9-8ff7-1a0d12a14fa8
+          stepCounter: 66a85631-6f55-4cb7-a2ab-1cbf24f75a27
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: AACS_REGION
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

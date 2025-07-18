@@ -1,0 +1,244 @@
+fileVersion: 1
+id: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+name: ASSET_GROUPING
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_AADB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1828de02-0c7a-43fc-93ca-ba41f3479949
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ASSET_GROUPING_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d1ce91a-6c8a-4362-89b4-4760dc579d4e
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: ASSET_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 791e200f-fba1-40b1-adb9-d3db3ddafe05
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: FIXED
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17a57030-f24c-4fd4-8e40-4e98ad44f058
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PARENTID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e7b9f36-ae56-436f-9e69-1b69f92f2a5a
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: PRELIMDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 946aa343-0984-4f1b-bbf4-28a018058570
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: FINALDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dcc45528-4775-42b2-aabd-807e38cc076c
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93699ffc-b18c-47f9-85a0-febc54ed9ce9
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e2d9049-ea6e-4d88-ac39-300926da24fd
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 90bac259-5fb9-4378-8564-a8f0b27d6198
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87fd6068-4e22-46f1-b9eb-25aa48025303
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: edd81e80-cf0e-4751-9309-1f29756694e3
+          stepCounter: d1f56da6-0b1b-4972-8e91-fa050e39c98d
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ASSET_GROUPING
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

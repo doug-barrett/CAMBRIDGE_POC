@@ -1,0 +1,282 @@
+fileVersion: 1
+id: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+name: FUNDAPPROVALS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_AADB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40d20220-88c1-47b2-9abd-d4606539124d
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FUNDAPPROVALSID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5827d09d-cd67-48d3-b17e-7e3d2cdb9322
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: AIIM_FUND_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4fee519-87bf-4ba6-8b73-fef1575c12ec
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FUND_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21e71ed1-86d6-4668-a059-207e4312f5dd
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: FUNDAPPROVALS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d023902-f218-4016-818f-da9e4b413efe
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: COMMENTS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d81e0a15-8e1e-4978-94b6-073b7ba8afe0
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: ADDED
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea153f6d-e240-4c27-bf90-d04362310ac4
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: MODIFIED
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24369746-79ce-4028-acb8-5d39b941bbbf
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: MODIFIEDBY_USERID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39a858c6-17d6-42c4-a5b4-bf563a14dfe2
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01519210-003a-4d05-a8c6-3a8332191607
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c65d44c2-5b47-46c0-b56c-e851b13bdf7b
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b9b782e-d909-4ed6-bd39-48f53b464bd9
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45a49f7c-e63f-4b18-8aec-207d4ca3a4fb
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61429e72-a31c-4c05-b149-148ea9cb0320
+          stepCounter: 0a93b0be-7a14-4cb0-9241-6cc975f52b50
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: FUNDAPPROVALS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

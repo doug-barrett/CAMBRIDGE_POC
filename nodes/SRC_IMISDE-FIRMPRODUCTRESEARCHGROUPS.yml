@@ -1,0 +1,206 @@
+fileVersion: 1
+id: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+name: FIRMPRODUCTRESEARCHGROUPS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_IMISDE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46d60e3d-cc92-4eaa-8b41-1a47f3842d06
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FIRMPRODUCTRESEARCHGROUP_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5690a75f-e0e1-47e5-927d-bbff6ecfa678
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FIRMKEY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f732cf4-f752-4ea9-88bf-e7ae2f326279
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PRODUCTKEY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d1cb9d0-4881-4767-95b2-38cf7be91ce9
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: RESEARCHGROUP_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 30e15d09-bd9e-49c5-9c3c-be32a804e4b0
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b2e5ac4-c586-41e8-92a0-62f179f8e8c5
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e876052b-b201-4d56-b2a9-72032a2715b8
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 846df76e-ce83-4a00-bb5d-d9562e4dd46e
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b11b747e-5a38-450f-9c78-9ee02d9f89d7
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e543903a-6ca7-4260-ac6e-98b8b9991d2b
+          stepCounter: f3581c9d-1a62-4004-baec-1f03f4f6e35d
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: FIRMPRODUCTRESEARCHGROUPS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

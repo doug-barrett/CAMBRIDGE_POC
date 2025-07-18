@@ -1,0 +1,225 @@
+fileVersion: 1
+id: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+name: VINTAGE_YEAR_BASIS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_AADB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: be7c10b7-86db-483b-9349-73fe0f2cc5d5
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: VINTAGE_YEAR_BASIS_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18617c40-39c5-4b99-9211-e5161d329022
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: VINTAGE_YEAR_BASIS_DESC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0760d8c9-34a8-4478-a4c7-3c1bea0f8daf
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: ADDED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 701c688f-dd5a-41e7-aa1a-c8cd2573d165
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: TIMESTAMP_NTZ(3)
+        defaultValue: ""
+        description: ""
+        name: MODIFIED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a6ce6b0-5e08-41da-b0ca-7e25938b3f80
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: VARCHAR(36)
+        defaultValue: ""
+        description: ""
+        name: VINTAGEYEARBASISGUID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d995f81-76cd-40a8-be41-b67a91c9a9f3
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e25ff6b8-c86e-44ff-8212-b011cc63bbcc
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1516c43-ff63-44aa-a85b-1a82d3f759df
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f7af741-4a6a-4456-8ae8-efceb823da35
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67d16eb7-15fd-4599-ba0d-5f6082787f0f
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 088aab09-c58f-4fbd-8d1e-cbc3204b635c
+          stepCounter: fa3e0fe6-a55b-467d-bae7-a596e84ec201
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: VINTAGE_YEAR_BASIS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,244 @@
+fileVersion: 1
+id: c9380e81-2d4c-4422-a934-c6461777d3b6
+name: CAMBRIDGE_DATA_MIGRATION_EXPORT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC_CMDB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de674921-47cd-4b31-980b-c6ded0afd11b
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: OLD_SERIES_CODE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3eede13-6bb7-48a1-8968-77bba1af65a5
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: VARCHAR(110)
+        defaultValue: ""
+        description: ""
+        name: OLD_LONG_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50fdd4e6-6f98-45da-a3ab-b3a4d05066bb
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: OLD_SHORT_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc95f5db-4c8d-487f-b9d9-4d59bf9f95af
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: NEW_SERIES_CODE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a53c74b-644a-4b34-ab71-78de0c9e33de
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DATA_TYPE_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e1f38d2-f704-4c5d-b060-5f25902ad27f
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ISNOTLEGACYSERIES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 98621642-8f2d-4cee-9c2b-7c3a5a8297ca
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: CREATED_BY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1204a6b9-7635-411f-baeb-9d760757add8
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: TIMESTAMP_NTZ(0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CAPTURE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ccbe8d47-f6d8-4c3e-a7bb-25bfb2cfade8
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_OP
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba4d64c3-c28b-4956-92f6-81475ed9a202
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: VARCHAR(46)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_SEQUENCE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f097aad6-a451-4570-ade6-9a324cb61a84
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: TIMESTAMP_TZ(3)
+        defaultValue: ""
+        description: ""
+        name: HVR_CHANGE_TIME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 506d7009-85a3-42e6-aa0a-658d5e67d67a
+          stepCounter: c9380e81-2d4c-4422-a934-c6461777d3b6
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: SOURCE_CD
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CAMBRIDGE_DATA_MIGRATION_EXPORT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

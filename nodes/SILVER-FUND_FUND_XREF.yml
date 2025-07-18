@@ -1,0 +1,146 @@
+fileVersion: 1
+id: 42d09e8b-fb50-428e-85f3-759c94ececdc
+name: FUND_FUND_XREF
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41cc213c-479c-4ff6-bafc-dd67314ec826
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b52bc73-5f32-46bb-b80e-e6780c1db2bd
+                stepCounter: 343aa62a-f706-4063-9a3e-aa73a379e817
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8371c96c-bf4b-46e0-8820-5e6a4e53e146
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: VARCHAR(36)
+        description: ""
+        name: CAMBRIDGE_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2fb0f56-ec7d-444a-a9ac-c9585430a365
+                stepCounter: a10c5f95-5e4a-47f6-bd02-ea187652782c
+            transform: "\"BROOKLYN_XREF_FX\".\"CAMBRIDGEID\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5f39e67-782a-4120-b185-68fbf4ab8ae0
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BROOKLYN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b52bc73-5f32-46bb-b80e-e6780c1db2bd
+                stepCounter: 343aa62a-f706-4063-9a3e-aa73a379e817
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11824334-c715-4d8c-a37a-b52d1d125d54
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: IMIS_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 52d0a600-d317-4781-a0d0-205158a9bb14
+                stepCounter: a10c5f95-5e4a-47f6-bd02-ea187652782c
+            transform: "\"BROOKLYN_XREF_FX\".\"IMISID\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff06981f-ef10-4871-b7c6-2b85d548fcfe
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: AADB_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d922e73-5b43-4fbb-bb04-9557a92c6141
+                stepCounter: a10c5f95-5e4a-47f6-bd02-ea187652782c
+            transform: "\"BROOKLYN_XREF_FX\".\"AADBID\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 960d97f1-a765-4ca3-a2cc-989e0bea551f
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: VARCHAR(128)
+        description: ""
+        name: AADB_TABLE_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd761045-1966-41be-857b-6560fead97ed
+                stepCounter: a10c5f95-5e4a-47f6-bd02-ea187652782c
+            transform: "\"BROOKLYN_XREF_FX\".\"AADBTABLENAME\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 05e7de55-98a3-4f66-a395-497a3845d788
+          stepCounter: 42d09e8b-fb50-428e-85f3-759c94ececdc
+        config: {}
+        dataType: VARCHAR(36)
+        description: ""
+        name: PRODUCT_CAMBRIDGE_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2fb0f56-ec7d-444a-a9ac-c9585430a365
+                stepCounter: a10c5f95-5e4a-47f6-bd02-ea187652782c
+            transform: "\"BROOKLYN_XREF_PX\".\"CAMBRIDGEID\""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          BROOKLYN_XREF_FX: a10c5f95-5e4a-47f6-bd02-ea187652782c
+          BROOKLYN_XREF_PX: a10c5f95-5e4a-47f6-bd02-ea187652782c
+          FUND: 343aa62a-f706-4063-9a3e-aa73a379e817
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: BROOKLYN_XREF
+          - locationName: SRC_BROOKLYN
+            nodeName: FUND
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC_BROOKLYN', 'FUND') }} "FUND"
+            LEFT JOIN {{ ref('SILVER', 'BROOKLYN_XREF') }} "BROOKLYN_XREF_FX"
+            ON "FUND"."FUNDID" = "BROOKLYN_XREF_FX"."BROOKLYNID"
+            AND "BROOKLYN_XREF_FX"."ENTITYTYPEID" = 3
+            LEFT JOIN {{ ref('SILVER', 'BROOKLYN_XREF') }} "BROOKLYN_XREF_PX"
+            ON "FUND"."FUNDID" = "BROOKLYN_XREF_FX"."BROOKLYNID"
+            AND "BROOKLYN_XREF_FX"."ENTITYTYPEID" = 2
+        name: FUND_FUND_XREF
+        noLinkRefs: []
+  name: FUND_FUND_XREF
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

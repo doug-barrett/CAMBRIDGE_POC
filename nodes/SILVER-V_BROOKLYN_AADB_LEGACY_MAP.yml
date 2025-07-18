@@ -1,0 +1,121 @@
+fileVersion: 1
+id: f9ccbc01-3e34-40c7-a213-c2a947330d75
+name: V_BROOKLYN_AADB_LEGACY_MAP
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43f84f67-0164-4e7c-baef-d647aa02fea2
+          stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BROOKLYNID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6dc2423d-76d3-448b-98e3-2bfbfa7024b1
+                stepCounter: 70c4eb5d-126c-4131-b1d6-ac075f51fa85
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b6fa170-2153-4591-98db-3c2f8a19d37f
+          stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
+        config: {}
+        dataType: VARCHAR(128)
+        description: ""
+        name: BROOKLYNTABLENAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e5ed9d9-7371-436e-9c16-ef707b15b049
+                stepCounter: 303c7084-4176-4976-9e20-f2e552ede500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13b55163-34c5-458c-bee5-06f646547a8a
+          stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
+        config: {}
+        dataType: VARCHAR(128)
+        description: ""
+        name: LEGACYDATABASENAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 634669e7-365d-4933-ad1a-24f6f21b6983
+                stepCounter: 303c7084-4176-4976-9e20-f2e552ede500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13d1304f-2bc0-424d-9c5e-e43193fcbe39
+          stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
+        config: {}
+        dataType: VARCHAR(128)
+        description: ""
+        name: LEGACYTABLENAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ecce9b1-25f9-4742-ac26-75544e3c0989
+                stepCounter: 303c7084-4176-4976-9e20-f2e552ede500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 497ba471-3531-41a0-86b0-3a7fc8377774
+          stepCounter: f9ccbc01-3e34-40c7-a213-c2a947330d75
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: LEGACYID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4565a4c-f6f1-48b0-8624-09aaf5c841df
+                stepCounter: 303c7084-4176-4976-9e20-f2e552ede500
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ENTITY: 70c4eb5d-126c-4131-b1d6-ac075f51fa85
+          LEGACYMAP: 303c7084-4176-4976-9e20-f2e552ede500
+          V_BROOKLYN_ACTIVE_GROUPINGS: cbc5d5c9-8b4b-49b8-a1e2-c67aa5a1f96d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: V_BROOKLYN_ACTIVE_GROUPINGS
+          - locationName: SRC_BROOKLYN
+            nodeName: ENTITY
+          - locationName: SRC_BROOKLYN
+            nodeName: LEGACYMAP
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC_BROOKLYN', 'ENTITY') }} "ENTITY"
+            JOIN {{ ref('SRC_BROOKLYN', 'LEGACYMAP') }} "LEGACYMAP"
+            ON "ENTITY"."ENTITYID" = "LEGACYMAP"."BROOKLYNID"
+            AND "LEGACYMAP"."LEGACYDATABASENAME" = 'Aadb'
+            LEFT JOIN {{ ref('SILVER', 'V_BROOKLYN_ACTIVE_GROUPINGS') }} "V_BROOKLYN_ACTIVE_GROUPINGS"
+            ON "V_BROOKLYN_ACTIVE_GROUPINGS"."ENTITYID" = "ENTITY"."ENTITYID"
+            WHERE "ENTITY"."ENTITYTYPEID" IN ({{parameters.ENTITY_TYPES}})
+            AND "V_BROOKLYN_ACTIVE_GROUPINGS"."ENTITYID" IS NULL
+        name: V_BROOKLYN_AADB_LEGACY_MAP
+        noLinkRefs: []
+  name: V_BROOKLYN_AADB_LEGACY_MAP
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

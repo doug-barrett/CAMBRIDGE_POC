@@ -1,0 +1,61 @@
+fileVersion: 1
+id: 80e9ce9c-415c-4dfa-89dd-b565e2ea8c9b
+name: V_BROOKLYN_DUPLICATES
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ea3dcab-712d-466a-989e-6899fac4de92
+          stepCounter: 80e9ce9c-415c-4dfa-89dd-b565e2ea8c9b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ENTITYID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6dc2423d-76d3-448b-98e3-2bfbfa7024b1
+                stepCounter: 70c4eb5d-126c-4131-b1d6-ac075f51fa85
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ENTITY: 70c4eb5d-126c-4131-b1d6-ac075f51fa85
+          LEGACYMAP: 303c7084-4176-4976-9e20-f2e552ede500
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_BROOKLYN
+            nodeName: ENTITY
+          - locationName: SRC_BROOKLYN
+            nodeName: LEGACYMAP
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC_BROOKLYN', 'ENTITY') }} "ENTITY"
+            JOIN {{ ref('SRC_BROOKLYN', 'LEGACYMAP') }} "LEGACYMAP"
+            ON "LEGACYMAP"."BROOKLYNID" = "ENTITY"."ENTITYID"
+            WHERE "ENTITY"."ENTITYTYPEID" IN (1,2,3,4)
+            AND "LEGACYMAP"."LEGACYDATABASENAME" IN ('Imis', 'Aadb')
+            GROUP BY "ENTITY"."ENTITYID"
+            HAVING COUNT(1) > 1
+        name: V_BROOKLYN_DUPLICATES
+        noLinkRefs: []
+  name: V_BROOKLYN_DUPLICATES
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

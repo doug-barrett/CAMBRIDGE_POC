@@ -1,0 +1,65 @@
+fileVersion: 1
+id: cbc5d5c9-8b4b-49b8-a1e2-c67aa5a1f96d
+name: V_BROOKLYN_ACTIVE_GROUPINGS
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41d7a33d-d1c4-41dd-be0c-f2753b31f15a
+          stepCounter: cbc5d5c9-8b4b-49b8-a1e2-c67aa5a1f96d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ENTITYID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6dc2423d-76d3-448b-98e3-2bfbfa7024b1
+                stepCounter: 70c4eb5d-126c-4131-b1d6-ac075f51fa85
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ENTITY: 70c4eb5d-126c-4131-b1d6-ac075f51fa85
+          LEGACYMAP: 303c7084-4176-4976-9e20-f2e552ede500
+          V_BROOKLYN_DUPLICATES: 80e9ce9c-415c-4dfa-89dd-b565e2ea8c9b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: V_BROOKLYN_DUPLICATES
+          - locationName: SRC_BROOKLYN
+            nodeName: ENTITY
+          - locationName: SRC_BROOKLYN
+            nodeName: LEGACYMAP
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC_BROOKLYN', 'ENTITY') }} "ENTITY"
+            JOIN {{ ref('SILVER', 'V_BROOKLYN_DUPLICATES') }} "V_BROOKLYN_DUPLICATES"
+            ON "ENTITY"."ENTITYID" = "V_BROOKLYN_DUPLICATES"."ENTITYID"
+            JOIN {{ ref('SRC_BROOKLYN', 'LEGACYMAP') }} "LEGACYMAP"
+            ON "LEGACYMAP"."BROOKLYNID" = "ENTITY"."ENTITYID"
+            WHERE "ENTITY"."ENTITYTYPEID" IN (1, 2, 3, 4)
+            AND "LEGACYMAP"."LEGACYDATABASENAME" IN ('Imis', 'Aadb')
+            GROUP BY "ENTITY"."ENTITYID"
+        name: V_BROOKLYN_ACTIVE_GROUPINGS
+        noLinkRefs: []
+  name: V_BROOKLYN_ACTIVE_GROUPINGS
+  overrideSQL: false
+  schema: ""
+  sqlType: "1"
+  type: sql
+  version: 1
+type: Node

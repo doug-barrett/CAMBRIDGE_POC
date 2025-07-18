@@ -1,3 +1,14 @@
 defaultStorageMapping: null
 fileVersion: 1
-locations: []
+locations:
+  - BRONZE
+  - GOLD
+  - MY_LOC
+  - SILVER
+  - SRC_AADB
+  - SRC_BROOKLYN
+  - SRC_CMDB
+  - SRC_COMMON
+  - SRC_CRMERP
+  - SRC_GOVERN
+  - SRC_IMISDE
